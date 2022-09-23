@@ -1,0 +1,108 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.sidebar {
+  left: 0;
+  top: 0;
+  position: fixed;
+  width: 14%;
+  background: white;
+  transition: all 0.5s ease;
+  height: 100vh;
+  border-right: 1px solid rgb(165 110 110 / 12%);
+}
+
+.sidebar .nav-links li {
+  position: relative;
+  list-style: none;
+  padding: 10px 0px;
+  transition: all 0.4s ease;
+  margin: 20px 33px;
+}
+
+.sidebar .nav-links li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.sidebar .nav-links li a img {
+  width: 17px;
+  margin-right: 20px;
+}
+
+.sidebar .nav-links li a .link_name {
+  font-size: 14px;
+  text-align: left;
+  transition: all 0.4s ease;
+  color: #B8B9BC;
+}
+
+.sidebar.closed {
+  width: 6%;
+}
+
+// iniatially  blue color logo hidden for large screen
+.sidebar .blue-logo {
+  display: none;
+}
+
+// iniatially  graey color logo visible for large screen
+.sidebar .grey-logo {
+  display: block;
+}
+
+.sidebar.closed .blue-logo {
+  display: none;
+}
+
+.sidebar.closed .grey-logo {
+  display: block;
+}
+
+.sidebar.closed .line {
+  margin: auto;
+  width: 39px;
+  text-align: center;
+}
+
+.sidebar.closed .nav-links li a .link_name {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.active {
+  border-right: 3px solid blue;
+  margin-right: -33px;
+}
+
+.active .blue-logo {
+  display: block !important;
+}
+
+.active .grey-logo {
+  display: none !important;
+}
+
+.active .link_name {
+  color: blue !important;
+  font-weight: 600;
+}
+
+.line {
+  margin: auto;
+  width: 60%;
+  border-top: 1px solid #fffcfc;
+}
+
+.arrow-img {
+  width: 17px;
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+}
+
+
